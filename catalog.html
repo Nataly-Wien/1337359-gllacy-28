@@ -3,10 +3,248 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Глейси</title>  
+  <title>HTML Academy: Глейси</title>
+  <link href="css/outline.css" rel="stylesheet">
 </head>
 
 <body>
+  <header>
+  
+    <nav class="main-nav">
+      <a href="index.html">
+        <!-- <img class="main-nav__logo" src="img/лого.svg" alt="Логотип магазина Глейси" width="154" height="64"> -->
+        <img src="https://via.placeholder.com/150x100" alt="">
+      </a>
+      <ul class="main-menu">
+        <li class="main-menu__item">
+          <a class="active">
+            Каталог
+          </a>
+          <ul class="dropdown">
+            <li class="dropdown__item">
+              <b>
+                <a href="blank.html">
+                  Новинки
+                </a>                
+              </b>
+            </li>
+            <li class="dropdown__item">
+              <a>
+                <!-- Почему в ТЗ стоит, что здесь должна быть ссылка на эту же страницу? -->
+                Сливочное
+              </a>
+            </li>
+            <li class="dropdown__item">
+              <a href="blank.html">
+                Щербеты
+              </a>              
+            </li>
+            <li class="dropdown__item">
+              <a href="blank.html">
+                Фруктовый лед
+              </a>              
+            </li>
+            <li class="dropdown__item">
+              <a href="blank.html">
+                Мелорин
+              </a>              
+            </li>
+          </ul>
+        </li>
+        <li class="main-menu__item">
+          <a href="blank.html">
+            Доставка и оплата
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a href="blank.html">
+            О компании
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- или список? -->
+    <div class="">
+      <!-- не знаю, как правильно назвать этот раздел -->
+      <a href="#">
+        Поиск
+      </a>
+      <a href="#">
+        Вход
+      </a>
+      <a href="#">
+        Пусто
+      </a>
+    </div>
+    <p>с 10 до 20, ежедневно</p>
+    <a href="#">8 812 450-25-25</a> <!-- Надо ли телефон в ссылку или в p? -->
+  </header>
+  
+  <section class="breadcrumbs-section"> <!-- надо ли секцию или просто div?-->
+    <h2 class="visually-hidden">Навигация по сайту</h2>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="index.html">
+          Главная
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="blank.html">
+          Каталог
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="disabled">
+          Сливочное
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <form class="filter" action="post"> <!--Или get? -->
+  </form>
+
+  <section class="catalog">
+    <h2 class="visually-hidden">Хиты продаж</h2>
+    <ul class="goods">
+      <li class="good">
+        <h3 class="good__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+        <p class="good__price">310 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочно-кофейное с кусочками шоколада</h3>
+        <p class="good__price">380 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+        <p class="good__price">355 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочное крем-брюле с карамельной подливкой</h3>
+        <p class="good__price">415 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочное с брусничным джемом</h3>
+        <p class="good__price">325 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочно-черничное с цельными ягодами черники</h3>
+        <p class="good__price">410 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочно-лимонное с карамельной присыпкой</h3>
+        <p class="good__price">315 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочное с шоколадной стружкой</h3>
+        <p class="good__price">320 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочно-ванильное с кусочками шоколада</h3>
+        <p class="good__price">440 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочноe с ментоловым сиропом</h3>
+        <p class="good__price">435 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочное с кусочками черного шоколада</h3>
+        <p class="good__price">355 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+      <li class="good">
+        <h3 class="good__name">Сливочное с мятным сиропом</h3>
+        <p class="good__price">420 <span class="rouble">&#8381;</span><span>/кг</span></p>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+      </li>
+    </ul>
+  </section>
+
+  <div class="pagination">
+    <!-- <a class="disabled">
+      Предыдущая
+    </a>
+    <a class="pagination__item active">
+      1
+    </a>
+    <a class="pagination__item" href="#">
+      2
+    </a>
+    <a class="pagination__item" href="#">
+      3
+    </a>
+    <a class="pagination__item" href="#">
+      4
+    </a>
+    <a class="pagination__item" href="#">
+      5
+    </a>
+    <a href="#">
+      Следующая
+    </a> -->
+    
+  </div>
+
+  <footer>
+    <section class="comtacts">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#">
+            <!-- <img src="img/Vector.svg" alt="Фейсбук" width="32" height="32"> -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <!-- <img src="img/Vector1.svg" alt="ВКонтакте" width="32" height="32"> -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <!-- <img src="img/Vector2.svg" alt="Инстаграм" width="32" height="32"> -->
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#">
+            <!-- <img src="img/Vector3.svg" alt="Твитер" width="32" height="32"> -->
+          </a>
+        </li>
+      </ul>
+    </section>
+    <ul class="footer-menu">
+      <li class="footer-menu__item">
+        Для поставщиков
+      </li>
+      <li class="footer-menu__item">
+        О производстве
+      </li>
+      <li class="footer-menu__item">
+        Наши документы
+      </li>
+      <li class="footer-menu__item">
+        Экологические стандарты
+      </li>
+    </ul>
+    <div>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Логотип HTML Academy">
+      </a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <!-- То ли я оборачиваю в ссылку? В ТЗ не так -->
+        <p>Сделано в HTML Academy © 2019</p>
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>
