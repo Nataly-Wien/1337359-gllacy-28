@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="css/outline.css" rel="stylesheet">
   </head>
   <body>
 
@@ -53,21 +52,19 @@
           </li>
         </ul>                
       </nav>
-
         <!-- или список? -->
-        <div class="">
-          <!-- не знаю, как правильно назвать этот раздел(( -->
-          <a href="#">
-            Поиск
-          </a>
-          <a href="#">
-            Вход
-          </a>
-          <a href="#">
-            Пусто
-          </a>
-        </div>    
-    
+      <div class="">
+        <!-- не знаю, как правильно назвать этот раздел -->
+        <a href="#">
+          Поиск
+        </a>
+        <a href="#">
+          Вход
+        </a>
+        <a href="#">
+          Пусто
+        </a>
+      </div>    
     </header>
     
     <main>
@@ -99,29 +96,112 @@
     
       <section class="hits">
         <h2 class="visually-hidden">Хиты продаж</h2>
+        <ul class="goods">
+          <li class="good hit">
+            <h3 class="good__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            <p class="good__price">310 <span class="rouble">&#8381;</span><span>/кг</span></p>
+            <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+          </li>
+          <li class="good hit">
+            <h3 class="good__name">Сливочно-кофейное с кусочками шоколада</h3>
+            <p class="good__price">380 <span class="rouble">&#8381;</span><span>/кг</span></p>
+            <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+          </li>
+          <li class="good hit">
+            <h3 class="good__name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            <p class="good__price">355 <span class="rouble">&#8381;</span><span>/кг</span></p>
+            <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+          </li>
+          <li class="good hit">
+            <h3 class="good__name">Сливочное крем-брюле с карамельной подливкой</h3>
+            <p class="good__price">415 <span class="rouble">&#8381;</span><span>/кг</span></p>
+            <img class="good__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
+          </li>
+        </ul>
       </section>
     
       <section class="features">
         <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
+        <ul class="features__list">
+          <li class="features__item">
+            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>            
+          </li>
+          <li class="features__item">
+            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          </li>
+          <li class="features__item">
+            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          </li>
+          <li class="features__item">
+            <p>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+          </li>      
+        </ul>
       </section>
-    
+
       <article class="blog">
-        <a href="blank.html">
-          <h2>10 способов сервировки фруктовых щербетов к столу</h2>
+        <!-- Можно ли так и как правильно? -->
+        <p>Новое в нашем блоге</p>
+        <a href="blank.html">    
+          <h2>10 способов сервировки фруктовых щербетов к столу</h2>                 
         </a>
       </article>
     
       <form class="subscription">
+        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не
+        спамить и не слать всякой ненужной ерунды. Честно =)</p>
+
       </form>
     
       <section class="map">
+        <h2>Как нас найти</h2>
+
       </section>
     </main>
     
     <footer>
       <section class="comtacts">
         <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social">
+          <li class="social__item"> 
+            <a href="#">
+              <!-- <img src="img/Vector.svg" alt="Фейсбук" width="32" height="32"> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <!-- <img src="img/Vector1.svg" alt="ВКонтакте" width="32" height="32"> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <!-- <img src="img/Vector2.svg" alt="Инстаграм" width="32" height="32"> -->
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#">
+              <!-- <img src="img/Vector3.svg" alt="Твитер" width="32" height="32"> -->
+            </a>
+          </li>
+        </ul>
       </section>
+      <ul class="footer-menu">
+        <li class="footer-menu__item">
+          Для поставщиков
+        </li>
+        <li class="footer-menu__item">
+          О производстве
+        </li>
+        <li class="footer-menu__item">
+          Наши документы
+        </li>
+        <li class="footer-menu__item">
+          Экологические стандарты
+        </li>
+      </ul>
+      <div>
+        <img class="good__image" src="https://via.placeholder.com/150x100" alt="Логотип HTML Academy">
+        <p>Сделано в HTML Academy © 2019</p>
+      </div>      
     </footer>
     
     <form class="search-form" action="post">
@@ -129,7 +209,6 @@
     
     <form class="entry-form" action="post">
     </form>
-
 
   </body>
 </html>
