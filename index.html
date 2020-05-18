@@ -6,11 +6,6 @@
   </head>
   <body>
 
-    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-    
-
-    Вопрос: можно ли исправлять опечатки макета???-->
-
     <header>
     
       <nav class="main-nav">
@@ -66,21 +61,25 @@
         </ul>                
       </nav>
 
-        <!-- или список? -->
-      <div class="">
-        <!-- не знаю, как правильно назвать этот раздел -->
-        <a href="#">
-          Поиск
-        </a>
-        <a href="#">
-          Вход
-        </a>
-        <a href="#">
-          Пусто
-        </a>
-      </div>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a href="#">
+            Поиск
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a href="#">
+            Вход
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a href="#">
+            2 товара
+          </a>
+        </li>
+      </ul>
       <p>с 10 до 20, ежедневно</p>
-      <a href="#">8 812 450-25-25</a> <!-- Надо ли телефон в ссылку или в p? -->
+      <a href="tel:88124502525">8 812 450-25-25</a>
     </header>
     
     <main>
@@ -88,15 +87,11 @@
     
       <section class="slider-section">
         <h2 class="visually-hidden">Давайте оба! Предложение из двух сортов мороженного</h2>
-        <input type="radio" id="slide1" name="toggle" checked>
-        <input type="radio" id="slide2" name="toggle">
-        <input type="radio" id="slide3" name="toggle">
-        <button type="button">Давайте оба!</button>
-        <div class="slider__controls">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
-        </div>
+        <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button>  
+        <a href="blank.html">>Давайте оба!</a>      
+        <!-- <button type="button">Давайте оба!</button> -->
         <div class="slider">
           <div class="slider__slides slide1">
             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
@@ -135,30 +130,30 @@
     
       <section class="hits">
         <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul class="goods__list">
+        <ul class="goods-list">
           <li class="goods hit">
             <h3 class="goods__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             <p class="goods__price">310 <span class="rouble">&#8381;</span><span>/кг</span></p>
             <img class="goods__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
-            <a class="goods__button" href="blank.html" type="button">Быстрый просмотр</a>
+            <a class="goods__button" href="blank.html">Быстрый просмотр</a>
           </li>
           <li class="goods hit">
             <h3 class="goods__name">Сливочно-кофейное с кусочками шоколада</h3>
             <p class="goods__price">380 <span class="rouble">&#8381;</span><span>/кг</span></p>
             <img class="goods__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
-            <a class="goods__button" href="blank.html" type="button">Быстрый просмотр</a>
+            <a class="goods__button" href="blank.html">Быстрый просмотр</a>
           </li>
           <li class="goods hit">
             <h3 class="goods__name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
             <p class="goods__price">355 <span class="rouble">&#8381;</span><span>/кг</span></p>
             <img class="goods__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
-            <a class="goods__button" href="blank.html" type="button">Быстрый просмотр</a>
+            <a class="goods__button" href="blank.html">Быстрый просмотр</a>
           </li>
           <li class="goods hit">
             <h3 class="goods__name">Сливочное крем-брюле с карамельной подливкой</h3>
             <p class="goods__price">415 <span class="rouble">&#8381;</span><span>/кг</span></p>
             <img class="goods__image" src="https://via.placeholder.com/150x100" alt="Изображение мороженного">
-            <a class="goods__button" href="blank.html" type="button">Быстрый просмотр</a>
+            <a class="goods__button" href="blank.html">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -167,16 +162,16 @@
         <h2>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</h2>
         <ul class="features__list">
           <li class="features__item">
-            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>            
+            Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.          
           </li>
           <li class="features__item">
-            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
           </li>
           <li class="features__item">
-            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+            Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
           </li>
           <li class="features__item">
-            <p>Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+            Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
           </li>      
         </ul>
       </section>
@@ -204,7 +199,6 @@
     <footer>
       <section class="comtacts">
         <h2 class="visually-hidden">Социальные сети</h2>
-        <!--Как здесь правильно делать, оборачивать иконку в ссылку + название в alt или в ссылке название + скрывать?-->
         <ul class="social">
           <li class="social__item">
             <a href="#">
@@ -234,26 +228,32 @@
       </section>
       <ul class="footer-menu">
         <li class="footer-menu__item">
-          Для поставщиков
+          <a href="blank.html">
+            Для поставщиков
+          </a>
         </li>
         <li class="footer-menu__item">
-          О производстве
+          <a href="blank.html">
+            О производстве
+          </a>
         </li>
         <li class="footer-menu__item">
-          Наши документы
+          <a href="blank.html">
+            Наши документы
+          </a>
         </li>
         <li class="footer-menu__item">
-          Экологические стандарты
+          <a href="blank.html">
+            Экологические стандарты
+          </a>
         </li>
       </ul>
       <div>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="https://via.placeholder.com/150x100" alt="Логотип HTML Academy">
         </a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"> <!-- То ли я оборачиваю в ссылку? В ТЗ не так -->
-          <p>Сделано в HTML Academy © 2019</p>
-        </a>        
-      </div>      
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>              
+      </div>
     </footer>
     
     <form class="search-form" action="get"> <!-- правильно здесь get?-->
