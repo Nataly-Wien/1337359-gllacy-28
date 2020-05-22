@@ -64,17 +64,17 @@
 
     <ul class="usernav">
       <li class="usernav__item">
-        <a href="#">
+        <a href="#search">
           Поиск
         </a>
       </li>
       <li class="usernav__item">
-        <a href="#">
+        <a href="#entry">
           Вход
         </a>
       </li>
       <li class="usernav__item">
-        <a href="#">
+        <a href="catalog.html#cart">
           Пусто
         </a>
       </li>
@@ -280,7 +280,7 @@
     </div>
   </footer>
 
-  <div class="search">
+  <div id="search">
     <form action="https://echo.htmlacademy.ru" method="get">
       <p>
         <label class="visually-hidden" for="search-field">Введите название мороженого для поиска в каталоге</label>
@@ -290,7 +290,7 @@
     </form>
   </div>
 
-  <section>
+  <section id="entry">
     <h2 class="visually-hidden">Личный кабинет</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
       <p>
@@ -302,15 +302,15 @@
         <input type="password" name="password" id="password-field" required>
       </p>
       <a href="#">Забыли пароль?</a>
-      <a href="#">Новая регистрация</a>
+      <a href="blank.html">Новая регистрация</a>
       <button class="button" type="submit">Войти</button>
     </form>
   </section>
 
-  <section>
+  <section id="feedback">
     <h2>Мы обязательно вам ответим!</h2>
     <button type="button">Закрыть</button>
-    <form id="feedback" action="https://echo.htmlacademy.ru" method="post">
+    <form action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="name-field">Как вас зовут?</label>
         <input type="text" name="username" id="name-field" placeholder="Имя Фамилия">
