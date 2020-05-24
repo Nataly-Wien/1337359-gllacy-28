@@ -64,19 +64,87 @@
 
     <ul class="usernav">
       <li class="usernav__item">
-        <a href="index.html#search">
-          Поиск
-        </a>
+        <!-- <a href="#search">
+                Поиск
+              </a> -->
+        <button class="usernav__button" type="button">Поиск</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search-field">Введите название мороженого для поиска в каталоге</label>
+          <input type="search" name="good" id="search-field" placeholder="Крем-брюле">
+        </form>
       </li>
       <li class="usernav__item">
-        <a href="index.html#entry">
+        <!-- <a href="#entry">
           Вход
-        </a>
+        </a> -->
+        <button class="usernav__button" type="button">Вход</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="login-field">Введите свой логин (почта)</label>
+            <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
+          </p>
+          <p>
+            <label class="visually-hidden" for="password-field">Введите свой пароль</label>
+            <input type="password" name="password" id="password-field" required>
+          </p>
+          <a href="#">Забыли пароль?</a>
+          <a href="blank.html">Новая регистрация</a>
+          <button class="button" type="submit">Войти</button>
+        </form>
       </li>
       <li class="usernav__item">
-        <a href="#cart">
+        <!-- <a href="#cart">
           2 товара
-        </a>
+        </a> -->
+        <button class="usernav__button" type="button"><span class="visually-hidden">Корзина</span>2 товара</button>
+        <section>
+          <h2 class="visually-hidden">Ваша корзина</h2>
+          <table>
+            <tr>
+              <td>
+                <button type="button">Удалить товар</button>
+              </td>
+              <td>
+                <img src="img/tovar-cart1.jpg" width="33" height="33" alt="">
+              </td>
+              <td>
+                Пломбир с апельсиновым джемом
+              </td>
+              <td>
+                1,5 кг х
+              </td>
+              <td>
+                200 руб.
+              </td>
+              <td>
+                300 руб.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button">Удалить товар</button>
+              </td>
+              <td>
+                <img src="img/tovar-cart2.jpg" width="33" height="33" alt="">
+              </td>
+              <td>
+                Клубничный пломбир с присыпкой из белого шоколада
+              </td>
+              <td>
+                1,5 кг х
+              </td>
+              <td>
+                300 руб.
+              </td>
+              <td>
+                450 руб.
+              </td>
+            </tr>
+          </table>
+          <span>Итого:</span>
+          <span>750 руб.</span>
+          <a class="button" href="blank.html">Оформить заказ</a>
+        </section>
       </li>
     </ul>
     <p>с 10 до 20, ежедневно</p>
@@ -276,54 +344,6 @@
     </div>
   </footer>
 
-  <section id="cart">
-    <h2 class="visually-hidden">Ваша корзина</h2>
-    <table>
-      <tr>
-        <td>
-          <button type="button">Удалить товар</button>
-        </td>
-        <td>
-          <img src="img/tovar-cart1.jpg" width="33" height="33" alt="">
-        </td>
-        <td>
-          Пломбир с апельсиновым джемом
-        </td>
-        <td>
-          1,5 кг х
-        </td>
-        <td>
-          200 руб.
-        </td>
-        <td>
-          300 руб.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button type="button">Удалить товар</button>
-        </td>
-        <td>
-          <img src="img/tovar-cart2.jpg" width="33" height="33" alt="">
-        </td>
-        <td>
-          Клубничный пломбир с присыпкой из белого шоколада
-        </td>
-        <td>
-          1,5 кг х
-        </td>
-        <td>
-          300 руб.
-        </td>
-        <td>
-          450 руб.
-        </td>
-      </tr>
-    </table>
-    <span>Итого:</span>
-    <span>750 руб.</span>
-    <a class="button" href="blank.html">Оформить заказ</a>
-  </section>
 </body>
 
 </html>

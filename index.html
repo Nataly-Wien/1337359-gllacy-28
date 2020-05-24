@@ -64,19 +64,39 @@
 
     <ul class="usernav">
       <li class="usernav__item">
-        <a href="#search">
+        <!-- <a href="#search">
           Поиск
-        </a>
+        </a> -->
+        <button class="usernav__button" type="button">Поиск</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search-field">Введите название мороженого для поиска в каталоге</label>
+          <input type="search" name="good" id="search-field" placeholder="Крем-брюле">
+        </form>
       </li>
       <li class="usernav__item">
-        <a href="#entry">
+        <!-- <a href="#entry">
           Вход
-        </a>
+        </a> -->
+        <button class="usernav__button" type="button">Вход</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="login-field">Введите свой логин (почта)</label>
+            <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
+          </p>
+          <p>
+            <label class="visually-hidden" for="password-field">Введите свой пароль</label>
+            <input type="password" name="password" id="password-field" required>
+          </p>
+          <a href="#">Забыли пароль?</a>
+          <a href="blank.html">Новая регистрация</a>
+          <button class="button" type="submit">Войти</button>
+        </form>
       </li>
       <li class="usernav__item">
-        <a href="catalog.html#cart">
+        <!-- <a href="catalog.html#cart">
           Пусто
-        </a>
+        </a> -->
+        <button class="usernav__button" type="button"><span class="visually-hidden">Корзина</span>Пусто</button>
       </li>
     </ul>
     <p>с 10 до 20, ежедневно</p>
@@ -88,22 +108,24 @@
 
     <section class="slider-section">
       <h2 class="visually-hidden">Давайте оба! Предложение из двух сортов мороженого</h2>
-      <button type="button"></button>
-      <button type="button"></button>
-      <button type="button"></button>
-      <a class="button" href="blank.html">Давайте оба!</a>
+      <button type="button">Предложение 1</button>
+      <button type="button">Предложение 2</button>
+      <button type="button">Предложение 3</button>
       <ul class="slider">
         <li class="slider__slides slide1">
           <h3>Крем-брюле и пломбир с малиновым джемом</h3>
           <img src="img/group-1.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
+          <a class="button" href="blank.html">Давайте оба!</a>
         </li>
         <li class="slider__slides slide2">
           <h3>Шоколадный пломбир и лимонный сорбет</h3>
           <img src="img/group-2.png" width="644" height="582" alt="Шоколадный пломбир и лимонный сорбет">
+          <a class="button" href="blank.html">Давайте оба!</a>
         </li>
         <li class="slider__slides slide3">
           <h3>Пломбир с помадкой и клубничный щербет</h3>
           <img src="img/group-3.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет">
+          <a class="button" href="blank.html">Давайте оба!</a>
         </li>
       </ul>
     </section>
@@ -279,33 +301,6 @@
       <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </div>
   </footer>
-
-  <div id="search">
-    <form action="https://echo.htmlacademy.ru" method="get">
-      <p>
-        <label class="visually-hidden" for="search-field">Введите название мороженого для поиска в каталоге</label>
-        <input type="search" name="good" id="search-field" placeholder="Крем-брюле">
-      </p>
-      <!-- Я правильно думаю, что здесь нет кнопки отправки, можно просто по нажатию enter в поле делать form.submit()? -->
-    </form>
-  </div>
-
-  <section id="entry">
-    <h2 class="visually-hidden">Личный кабинет</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label class="visually-hidden" for="login-field">Введите свой логин (почта)</label>
-        <input type="email" name="login" id="login-field" placeholder="email@example.com" required>
-      </p>
-      <p>
-        <label class="visually-hidden" for="password-field">Введите свой пароль</label>
-        <input type="password" name="password" id="password-field" required>
-      </p>
-      <a href="#">Забыли пароль?</a>
-      <a href="blank.html">Новая регистрация</a>
-      <button class="button" type="submit">Войти</button>
-    </form>
-  </section>
 
   <section id="feedback">
     <h2>Мы обязательно вам ответим!</h2>
