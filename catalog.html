@@ -168,7 +168,46 @@
       </li>
     </ul>
 
-    <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+    <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+      <h2 class="visually-hidden">Фильтры для сортировки и поиска</h2>
+      <label for="sort">Сортировка:</label>
+      <select name="sort" id="sort">
+        <option value="pop">по популярности</option>
+        <option value="cheap">сначала недорогие</option>
+        <option value="exp">сначала дорогие</option>
+        <option value="fat">по жирности</option>
+      </select>
+      <div class="range">
+        <p>Цена: <span id="minprice">100</span> <span>&#8381;</span> – <span id="maxprice">500</span>
+          <span>&#8381;</span></p>
+        <button id="range__left-btn" type="button">Цена минимально</button>
+        <button id="range__right-btn" type="button">Цена максимально</button>
+      </div>
+      <fieldset class="fat">
+        <legend>Жирность:</legend>
+        <input type="radio" id="fat1" name="fat" value="0" checked>
+        <label for="fat1">0%</label>
+        <input type="radio" id="fat2" name="fat" value="10">
+        <label for="fat2">до 10%</label>
+        <input type="radio" id="fat3" name="fat" value="30">
+        <label for="fat3">до 30%</label>
+        <input type="radio" id="fat4" name="fat" value="100">
+        <label for="fat4">выше 30%</label>
+      </fieldset>
+      <fieldset class="fill">
+        <legend>Наполнители:</legend>
+        <input type="checkbox" id="fill1" name="fill1" checked>
+        <label for="fill1">шоколадные</label>
+        <input type="checkbox" id="fill2" name="fill2" checked>
+        <label for="fill2">сахарные присыпки</label>
+        <input type="checkbox" id="fill3" name="fill3">
+        <label for="fill3">фрукты</label>
+        <input type="checkbox" id="fill4" name="fill4">
+        <label for="fill4">сиропы</label>
+        <input type="checkbox" id="fill5" name="fill5">
+        <label for="fill5">джемы</label>
+      </fieldset>
+      <button class="filter__button" type="submit">Применить</button>
     </form>
 
     <section class="catalog">
