@@ -41,6 +41,7 @@
   --shadow-red: #ac1000;
   --shadow-dark-red: #942718;
   --shadow-transp-grey: rgba(49, 50, 53, 0.5);
+  --range-transp: rgba(248, 247, 244, 0.5);
   --white-02: rgba(255, 255, 255, 0.2);
   --white-03: rgba(255, 255, 255, 0.3);
   --white-04: rgba(255, 255, 255, 0.4);
@@ -358,8 +359,13 @@ img {
   font-weight: normal;
   color: var(--input-grey);
 }
-.input:focus {
-  border: 1px solid var(--border-blue);
+.input:hover,
+.textarea:hover {
+  border: 2px solid var(--border-grey);
+}
+.input:focus,
+.textarea:focus {
+  border: 2px solid var(--border-blue);
 }
 /* Форма поиска */
 
@@ -1187,29 +1193,46 @@ ul.fieldset-wrapper {
   width: 21px;
 }
 .range__controls {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  box-sizing: border-box;
   width: 218px;
   height: 36px;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 17px 21px;
   background-color: var(--background-compo);
   border: none;
   border-radius: 20px;
-  padding-left: 21px;/* пока так, без полоски */
-  padding-right: 21px;
+}
+.range__controls .scale {
+  width: 176px;
+  height: 2px;
+  background-color: var(--range-transp);
+}
+.range__controls .progress {
+  width: 60%;
+  height: 2px;
+  margin-left: 10%;
+  background-color: var(--form-light-grey);
 }
 .range__btn {
+  position: absolute;
   display: inline-block;
   width: 4px;
   height: 4px;
+  top: 0;
   margin-top: 8px;
   margin-bottom: 8px;
-  font-size: 0;
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   background-color: var(--shadow-light-grey);
   box-shadow: 0 2px 0 0 var(--shadow-light-grey);
   cursor: pointer;
+}
+.range__btn.range-btn--min {
+  left: 35px;
+}
+.range__btn.range-btn--max {
+  left: 132px;
 }
 .filter-btn {
   justify-content: flex-end;

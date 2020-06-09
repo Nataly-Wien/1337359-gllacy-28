@@ -221,11 +221,13 @@
       </div>
       <div class="range filter__wrapper">
         <p class="filter__subtitle">Цена: <span id="minprice">100</span> <span>&#8381;</span> – <span
-            id="maxprice">500</span>
-          <span>&#8381;</span></p>
+            id="maxprice">500</span><span>&#8381;</span></p>
         <div class="range__controls">
-          <div class="range__btn" id="range-btn--left" tabindex="0">Цена минимально</div>
-          <div class="range__btn" id="range-btn--right" tabindex="0">Цена максимально</div>
+          <div class="scale">
+            <div class="progress"></div>
+          </div>
+          <div class="range__btn range-btn--min" id="range-btn--min" tabindex="0"></div>
+          <div class="range__btn range-btn--max" id="range-btn--max" tabindex="0"></div>
         </div>
       </div>
       <fieldset>
@@ -242,8 +244,6 @@
           <li>
             <input type="radio" id="fat3" name="fat" value="30">
             <label for="fat3">до 30%</label>
-          </li>
-          <li>
           </li>
           <li>
             <input type="radio" id="fat4" name="fat" value="100">
