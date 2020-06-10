@@ -19,7 +19,7 @@
         </a>
         <ul class="main-menu">
           <li class="main-menu__item main-menu__item--current">
-            <a href="blank.html">
+            <a class="btn" href="blank.html">
               Каталог
             </a>
             <ul class="dropdown">
@@ -53,12 +53,12 @@
             </ul>
           </li>
           <li class="main-menu__item">
-            <a href="blank.html">
+            <a class="btn" href="blank.html">
               Доставка и оплата
             </a>
           </li>
           <li class="main-menu__item">
-            <a href="blank.html">
+            <a class="btn" href="blank.html">
               О компании
             </a>
           </li>
@@ -67,7 +67,7 @@
 
       <ul class="usernav">
         <li class="usernav__item">
-          <a class="usernav__btn search-btn" href="#">
+          <a class="usernav__btn search-btn btn" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
               viewBox="0 0 17 17">
               <path fill="#fff"
@@ -82,7 +82,7 @@
           </form>
         </li>
         <li class="usernav__item">
-          <a class="usernav__btn" href="#">
+          <a class="usernav__btn btn" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="19"
               viewBox="0 0 21 19">
               <g fill="#000">
@@ -115,7 +115,7 @@
           </form>
         </li>
         <li class="usernav__item">
-          <a class="usernav__btn full" href="#">
+          <a class="usernav__btn full btn" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
               <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
               <circle fill="#343434" cx="6.984" cy="18" r="2" />
@@ -191,17 +191,17 @@
   <main class="container">
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
-        <a class="link" href="index.html">
+        <a class="link btn" href="index.html">
           Главная
         </a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="link" href="blank.html">
+        <a class="link btn" href="blank.html">
           Каталог
         </a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="link disabled">
+        <a class="link disabled btn">
           Сливочное
         </a>
       </li>
@@ -220,64 +220,127 @@
         </select>
       </div>
       <div class="range filter__wrapper">
-        <p class="filter__subtitle">Цена: <span id="minprice">100</span> <span>&#8381;</span> – <span
-            id="maxprice">500</span><span>&#8381;</span></p>
+        <p class="filter__subtitle">
+          <span>Цена:</span>
+          <label class="visually-hidden" for="min-price">Цена минимально</label>
+          <input class="price price__min" id="min-price" type="number" value="100">
+          <span><span>&#8381;</span> – </span>
+          <label class="visually-hidden" for="max-price">Цена максимально</label>
+          <input class="price price__min" id="max-price" type="number" value="500">
+          <span>&#8381;</span>
+        </p>
         <div class="range__controls">
           <div class="scale">
             <div class="progress"></div>
           </div>
-          <div class="range__btn range-btn--min" id="range-btn--min" tabindex="0"></div>
-          <div class="range__btn range-btn--max" id="range-btn--max" tabindex="0"></div>
+          <div class="range__btn range-btn--min btn" id="range-btn--min" tabindex="0"></div>
+          <div class="range__btn range-btn--max btn" id="range-btn--max" tabindex="0"></div>
         </div>
       </div>
       <fieldset>
         <legend class="filter__subtitle">Жирность:</legend>
         <ul class="fieldset-wrapper fat">
-          <li>
-            <input type="radio" id="fat1" name="fat" value="0" checked>
-            <label for="fat1">0%</label>
+          <li class="custom-check">
+            <input class="fat__input visually-hidden" type="radio" id="fat1" name="fat" value="0">
+            <svg class="fat__radio" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+              <path fill="#FFFFFF"
+                d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z" />
+              <circle fill="#FFFFFF" cx="12.5" cy="12.5" r="4.5" /></svg>
+            <label class="fat__check" for="fat1">0%</label>
           </li>
-          <li>
-            <input type="radio" id="fat2" name="fat" value="10">
-            <label for="fat2">до 10%</label>
+          <li class="custom-check">
+            <input class="fat__input visually-hidden" type="radio" id="fat2" name="fat" value="10" checked>
+            <svg class="fat__radio" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+              <path fill="#FFFFFF"
+                d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z" />
+              <circle fill="#FFFFFF" cx="12.5" cy="12.5" r="4.5" /></svg>
+            <label class="fat__check" for="fat2">до 10%</label>
           </li>
-          <li>
-            <input type="radio" id="fat3" name="fat" value="30">
-            <label for="fat3">до 30%</label>
+          <li class="custom-check">
+            <input class="fat__input visually-hidden" type="radio" id="fat3" name="fat" value="30">
+            <svg class="fat__radio" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+              <path fill="#FFFFFF"
+                d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z" />
+              <circle fill="#FFFFFF" cx="12.5" cy="12.5" r="4.5" /></svg>
+            <label class="fat__check" for="fat3">до 30%</label>
           </li>
-          <li>
-            <input type="radio" id="fat4" name="fat" value="100">
-            <label for="fat4">выше 30%</label>
+          <li class="custom-check">
+            <input class="fat__input visually-hidden" type="radio" id="fat4" name="fat" value="100">
+            <svg class="fat__radio" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+              <path fill="#FFFFFF"
+                d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z" />
+              <circle fill="#FFFFFF" cx="12.5" cy="12.5" r="4.5" /></svg>
+            <label class="fat__check" for="fat4">выше 30%</label>
           </li>
         </ul>
       </fieldset>
       <fieldset>
         <legend class="filter__subtitle">Наполнители:</legend>
         <ul class="fieldset-wrapper fill">
-          <li>
-            <input type="checkbox" id="fill1" name="fill1" checked>
-            <label for="fill1">шоколадные</label>
+          <li class="custom-check">
+            <input class="fill__input visually-hidden" type="checkbox" id="fill1" name="fill1" checked>
+            <svg class="fill__checkbox" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+              <path class="on" fill="#FFFFFF"
+                d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z" />
+              <path class="on" fill="#FFFFFF"
+                d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+              <path class="off" fill="#FFFFFF"
+                d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z" />
+            </svg>
+            <label class="fill__check" for="fill1">шоколадные</label>
           </li>
-          <li>
-            <input type="checkbox" id="fill2" name="fill2" checked>
-            <label for="fill2">сахарные присыпки</label>
+          <li class="custom-check">
+            <input class="fill__input visually-hidden" type="checkbox" id="fill2" name="fill2" checked>
+            <svg class="fill__checkbox" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+              <path class="on" fill="#FFFFFF"
+                d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z" />
+              <path class="on" fill="#FFFFFF"
+                d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+              <path class="off" fill="#FFFFFF"
+                d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z" />
+            </svg>
+            <label class="fill__check" for="fill2">сахарные присыпки</label>
           </li>
-          <li>
-            <input type="checkbox" id="fill3" name="fill3">
-            <label for="fill3">фрукты</label>
+          <li class="custom-check">
+            <input class="fill__input visually-hidden" type="checkbox" id="fill3" name="fill3">
+            <svg class="fill__checkbox" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+              <path class="on" fill="#FFFFFF"
+                d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z" />
+              <path class="on" fill="#FFFFFF"
+                d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+              <path class="off" fill="#FFFFFF"
+                d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z" />
+            </svg>
+            <label class="fill__check" for="fill3">фрукты</label>
           </li>
-          <li>
-            <input type="checkbox" id="fill4" name="fill4">
-            <label for="fill4">сиропы</label>
+          <li class="custom-check">
+            <input class="fill__input visually-hidden" type="checkbox" id="fill4" name="fill4">
+            <svg class="fill__checkbox" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+              <path class="on" fill="#FFFFFF"
+                d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z" />
+              <path class="on" fill="#FFFFFF"
+                d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+              <path class="off" fill="#FFFFFF"
+                d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z" />
+            </svg>
+            <label class="fill__check" for="fill4">сиропы</label>
           </li>
-          <li>
-            <input type="checkbox" id="fill5" name="fill5">
-            <label for="fill5">джемы</label>
+          <li class="custom-check">
+            <input class="fill__input visually-hidden" type="checkbox" id="fill5" name="fill5">
+            <svg class="fill__checkbox" xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23">
+              <path class="on" fill="#FFFFFF"
+                d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z" />
+              <path class="on" fill="#FFFFFF"
+                d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+              <path class="off" fill="#FFFFFF"
+                d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z" />
+            </svg>
+            <label class="fill__check" for="fill5">джемы</label>
           </li>
         </ul>
       </fieldset>
       <div class="filter-btn filter__wrapper">
-        <button class="filter__button" type="submit">Применить</button>
+        <button class="filter__button btn" type="submit">Применить</button>
       </div>
     </form>
 
@@ -401,19 +464,19 @@
       </a>
       <ul class="pagination">
         <li class="pagination__item">
-          <a class="active" title="Текуцая страница">1</a>
+          <a class="btn active" title="Текуцая страница">1</a>
         </li>
         <li class="pagination__item">
-          <a href="#">2</a>
+          <a class="btn" href="#">2</a>
         </li>
         <li class="pagination__item">
-          <a href="#">3</a>
+          <a class="btn" href="#">3</a>
         </li>
         <li class="pagination__item">
-          <a href="#">4</a>
+          <a class="btn" href="#">4</a>
         </li>
         <li class="pagination__item">
-          <a href="#">5</a>
+          <a class="btn" href="#">5</a>
         </li>
       </ul>
       <a class="paginator__arrow forward" href="#">
@@ -427,7 +490,7 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social">
         <li class="social__item">
-          <a href="#">
+          <a class="btn" href="#">
             <span class="visually-hidden">Фейсбук</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path fill="#FFF"
@@ -436,7 +499,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#">
+          <a class="btn" href="#">
             <span class="visually-hidden">ВКонтакте</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
@@ -449,7 +512,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#">
+          <a class="btn" href="#">
             <span class="visually-hidden">Инстаграм</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
@@ -464,7 +527,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#">
+          <a class="btn" href="#">
             <span class="visually-hidden">Твитер</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path fill="#FFF"
@@ -476,22 +539,22 @@
     </section>
     <ul class="footer-menu">
       <li class="footer-menu__item">
-        <a class="link accent provider" href="blank.html">
+        <a class="link accent provider btn" href="blank.html">
           Для поставщиков
         </a>
       </li>
       <li class="footer-menu__item">
-        <a class="link" href="blank.html">
-          О производстве
-        </a>
-      </li>
-      <li class="footer-menu__item">
-        <a class="link" href="blank.html">
+        <a class="link btn" href="blank.html">
           Наши документы
         </a>
       </li>
       <li class="footer-menu__item">
-        <a class="link" href="blank.html">
+        <a class="link btn" href="blank.html">
+          О производстве
+        </a>
+      </li>
+      <li class="footer-menu__item">
+        <a class="link btn" href="blank.html">
           Экологические стандарты
         </a>
       </li>
@@ -500,7 +563,7 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-academy.svg" width="108" height="39" alt="Разработчик сайта - HTML Academy">
       </a>
-      <p>Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+      <p>Сделано в <a class="link btn" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </div>
   </footer>
 

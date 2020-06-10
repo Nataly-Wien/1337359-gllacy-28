@@ -313,6 +313,9 @@ img {
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--black-04);
 }
+/* .usernav .entry {
+  display: block;
+} */
 .usernav__item:hover form,
 .usernav__item:hover section,
 .usernav__item form:hover,
@@ -346,15 +349,6 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-extra-dark);
 }
-.select {
-  width: 196px;
-  height: 36px;
-  padding-left: 16px;
-  color: var(--basic-white);
-  border: none;
-  border-radius: 20px;
-  background-color: var(--background-compo);
-}
 .input::placeholder {
   font-weight: normal;
   color: var(--input-grey);
@@ -364,9 +358,12 @@ img {
   border: 2px solid var(--border-grey);
 }
 .input:focus,
-.textarea:focus {
+.textarea:focus,
+.select:focus {
   border: 2px solid var(--border-blue);
+  outline: none;
 }
+
 /* Форма поиска */
 
 .usernav .search {
@@ -454,6 +451,9 @@ img {
 button[type="button"] {
   cursor: pointer;
 }
+.btn {
+  outline: none;
+}
 .button{
   font-size: 18px;
   font-weight: bold;
@@ -471,11 +471,13 @@ button[type="button"] {
   background-color: var(--background-light-red);
   background-image: linear-gradient(0deg, var(--white-02), var(--white-02)), linear-gradient(180deg, var(--button-red) 0%, var(--button-dark-red) 100%);
   box-shadow: 0px 1px 2px var(--shadow-red);
+  outline: none;
 }
 .button:active {
   background-color: var(--background-dark-red);
   background-image: linear-gradient(0deg, var(--black-007), var(--black-007)), linear-gradient(180deg, var(--button-red) 0%, var(--button-dark-red) 100%);
   box-shadow: inset 0px 2px 2px var(--shadow-dark-red);
+  outline: none;
 }
 
 /* Слайдер */
@@ -927,10 +929,13 @@ a>.goods__name {
 .social__item a path {
   fill: var(--white-08);
 }
-.social__item a path:hover,
-.social__item a path:focus,
-.social__item a path:active {
+.social__item a:hover path,
+.social__item a:focus path,
+.social__item a:active path {
   fill: var(--basic-white);
+}
+.social__item a:active {
+  border: 2px solid var(--white-07);
 }
 .footer-menu {
   display: grid;
@@ -1125,7 +1130,6 @@ a>.goods__name {
   display: flex;
   flex-wrap: wrap;
   justify-content: stretch;
-  /* align-items: stretch; */
   align-content: stretch;
 }
 .filter fieldset {
@@ -1135,7 +1139,7 @@ a>.goods__name {
   padding: 0;
   border: none;
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: 18px;
   margin-bottom: 10px;
 }
 legend.filter__subtitle {
@@ -1147,7 +1151,6 @@ legend.filter__subtitle {
   margin: 0;
   margin-bottom: 8px;
   margin-left: 16px;
-  padding: 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -1176,29 +1179,171 @@ ul.fieldset-wrapper {
   margin-right: 18px;
 }
 .fieldset-wrapper.fat {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 6px;
+  padding-bottom: 4px;
 }
 .fieldset-wrapper.fill {
   padding-top: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
+  margin-top: 2px;
 }
-.fat input,
-.fill input {
-  box-sizing: border-box;
+/* Стили для селекта есть еще среди инпутов */
+.select {
+  width: 196px;
+  height: 36px;
+  padding-left: 12px;
+  padding-bottom: 4px;
+  border: none;
+  border-radius: 20px;
+  color: var(--basic-white);
+  background-color: var(--background-compo);
+    /* убираем стрелочку */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: 92% center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5' viewBox='0 0 9 5'%3E%3Cpath fill='%23FFF' d='M4.5 5L0 0h9z'/%3E%3C/svg%3E");
+}
+.select:hover,
+.select:focus,
+.select:active {
+  border: none;
+  outline: none;
+  color: var(--basic-extra-dark);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5' viewBox='0 0 9 5'%3E%3Cpath fill='%23323232' d='M4.5 5L0 0h9z'/%3E%3C/svg%3E");
+}
+.select:focus,
+.select:active {
+  background-color: var(--basic-white);
+}
+ .select option {
+   font-size: 14px;
+   font-weight: normal;
+   line-height: 16px;
+   outline: none;
+ }
+
+/* Кастомные чекбоксы и радиокнопки */
+
+.fat__check,
+.fill__check {
+  display: inline-block;
+  z-index: 2;
+  vertical-align: super;
+  padding: 1px 1px 1px 39px;
+  cursor: pointer;
+}
+.fill__check {
+  padding-left: 43px;
+}
+.fat__radio,
+.fill__checkbox {
+  display: inline-block;
   margin: 0;
-  margin-right: 15px;
-  margin-left: 12px;
-  height: 21px;
-  width: 21px;
+  background-size: contain;
 }
+.fat__radio {
+  margin-left: 15px;
+  margin-right: -31px;
+  width: 22px;
+  height: 22px;
+}
+.fat__radio circle {
+  fill: transparent;
+}
+.fat__radio path {
+  fill: var(--white-08);
+}
+.fat__input:checked + .fat__radio circle {
+  fill: var(--white-08);
+}
+.fat__input:checked:disabled + .fat__radio circle {
+  fill: var(--white-04);
+}
+.fat__input:disabled + .fat__radio path{
+  fill: var(--white-04);
+}
+.custom-check:hover .fat__input:not(:disabled) + .fat__radio path {
+  fill: var(--basic-white);
+}
+.custom-check:hover .fat__input:checked:not(:disabled) + .fat__radio circle {
+  fill: var(--basic-white);
+}
+.fat__input:focus + .fat__radio path {
+  fill: var(--basic-white);
+}
+.fat__input:checked:focus + .fat__radio path {
+  fill: var(--basic-white);
+}
+.fat__input:checked:focus + .fat__radio circle {
+  fill: var(--basic-white);
+}
+.fill__checkbox {
+  margin-left: 16px;
+  margin-right: -34px;
+  width: 24px;
+  height: 20px;
+}
+.fill__checkbox .on {
+  fill: transparent;
+}
+.fill__checkbox .off {
+  fill: var(--white-08);
+}
+.fill__input:checked + .fill__checkbox .off {
+  fill: transparent;
+}
+.fill__input:checked + .fill__checkbox .on {
+  fill: var(--white-08);
+}
+.fill__input:disabled + .fill__checkbox .on {
+  fill: transparent;
+}
+.fill__input:disabled + .fill__checkbox .off {
+  fill: var(--white-04);
+}
+.fill__input:checked:disabled + .fill__checkbox .off {
+  fill: transparent;
+}
+.fill__input:checked:disabled + .fill__checkbox .on {
+  fill: var(--white-04);
+}
+.custom-check:hover .fill__input:not(:disabled) + .fill__checkbox .off {
+  fill: var(--basic-white);
+}
+.custom-check:hover .fill__input:not(:disabled) + .fill__checkbox .on {
+  fill: transparent;
+}
+.custom-check:hover .fill__input:checked:not(:disabled) + .fill__checkbox .on {
+  fill: var(--basic-white);
+}
+.custom-check:hover .fill__input:checked:not(:disabled) + .fill__checkbox .off {
+  fill: transparent;
+}
+.fill__input:focus + .fill__checkbox .on {
+  fill: transparent;
+}
+.fill__input:checked:focus + .fill__checkbox .on {
+  fill: var(--basic-white);
+}
+.fill__input:checked:focus + .fill__checkbox .off {
+  fill: transparent;
+}
+.fill__input:focus + .fill__checkbox .off {
+  fill: var(--basic-white);
+}
+
+/* Полозки */
+
 .range__controls {
   position: relative;
   box-sizing: border-box;
   width: 218px;
   height: 36px;
   margin: 0;
-  padding: 17px 21px;
+  padding: 16px 21px 18px;
   background-color: var(--background-compo);
   border: none;
   border-radius: 20px;
@@ -1219,20 +1364,44 @@ ul.fieldset-wrapper {
   display: inline-block;
   width: 4px;
   height: 4px;
-  top: 0;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  top: 8px;
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   background-color: var(--shadow-light-grey);
   box-shadow: 0 2px 0 0 var(--shadow-light-grey);
   cursor: pointer;
 }
+.range__btn:hover,
+.range__btn:focus,
+.range__btn:active {
+  top: 7px;
+  border-width: 9px;
+}
 .range__btn.range-btn--min {
   left: 35px;
 }
 .range__btn.range-btn--max {
   left: 132px;
+}
+.price {
+  -moz-appearance:textfield;
+  /* убираем стрелочки */
+  box-sizing: border-box;
+  width: 35px;
+  height: 16px;
+  margin: 0;
+  margin-right: -5px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--basic-white);
+  border: none;
+  background-color: transparent;
+}
+.price::-webkit-inner-spin-button,
+.price::-webkit-outer-spin-button {
+  /* убираем стрелочки */
+  -webkit-appearance: none;
 }
 .filter-btn {
   justify-content: flex-end;
@@ -1242,12 +1411,25 @@ ul.fieldset-wrapper {
   box-sizing: border-box;
   width: 144px;
   height: 36px;
+  margin-bottom: 4px;
+  padding-left: 10px;
   font: inherit;
   color: var(--basic-white);
   background-color: var(--background-compo);
-  padding-left: 29px;
   border-radius: 20px;
   border: 2px solid var(--basic-white);
+}
+.filter__button:hover,
+.filter__button:focus {
+  color: var(--basic-extra-dark);
+  background-color: var(--basic-white);
+  outline: none;
+}
+.filter__button:active {
+  color: var(--basic-extra-dark);
+  background-color: var(--basic-white);
+  border: none;
+  box-shadow: inset 0 2px 1px 0 var(--shadow-grey);
 }
 
 /* Пагинация */
