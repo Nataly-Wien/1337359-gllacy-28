@@ -265,8 +265,14 @@ img {
 .usernav__btn span {
   margin-left: 8px;
 }
-.usernav__btn:not(.full) path {
+.usernav__btn:not(.cart-full) path {
   fill: var(--basic-white);
+}
+.usernav__btn:not(.cart-full) circle {
+  fill: var(--basic-white);
+}
+.usernav__btn:not(.cart-full) .cart-area {
+  fill: transparent;
 }
 .usernav__btn:hover,
 .usernav__btn:focus,
@@ -274,31 +280,27 @@ img {
   color: var(--basic-extra-dark);
   background-color: var(--basic-white);
 }
-.usernav__btn:not(.full):hover path,
-.usernav__btn:not(.full):focus path,
-.usernav__btn:not(.full):active path {
+.usernav__btn:not(.cart-full):hover path:not(.cart-area),
+.usernav__btn:not(.cart-full):focus path:not(.cart-area),
+.usernav__btn:not(.cart-full):active path:not(.cart-area) {
   fill: var(--basic-extra-dark);
 }
-.usernav__btn:not(.full):hover circle,
-.usernav__btn:not(.full):focus circle,
-.usernav__btn:not(.full):active circle {
+.usernav__btn:not(.cart-full):hover circle,
+.usernav__btn:not(.cart-full):focus circle,
+.usernav__btn:not(.cart-full):active circle {
   fill: var(--basic-extra-dark);
 }
-.usernav__btn.full {
+.usernav__btn.cart-full {
   color: var(--basic-extra-dark);
   background-color: var(--basic-white);
 }
-/* Перекраска корзины? Как перекрашивать красное??? */
-/* .usernav__btn.full path {
-  fill: var(--basic-extra-dark);
-}
-.usernav__btn.full circle {
-  fill: var(--basic-extra-dark);
-} */
-.usernav__item .full:hover,
-.usernav__item .full:focus,
-.usernav__item .full:active {
+.usernav__btn.cart-full:hover,
+.usernav__btn.cart-full:focus,
+.usernav__btn.cart-full:active {
   color: var(--link-dark-red);
+}
+.usernav__btn.cart-full .cart-area   {
+  fill: var(--link-dark-red);
 }
 .usernav .search,
 .usernav .entry,
@@ -1187,7 +1189,9 @@ ul.fieldset-wrapper {
   padding-bottom: 5px;
   margin-top: 2px;
 }
-/* Стили для селекта есть еще среди инпутов */
+
+/* Стили для селекта, есть еще среди инпутов */
+
 .select {
   width: 196px;
   height: 36px;
@@ -1242,7 +1246,6 @@ ul.fieldset-wrapper {
 .fill__checkbox {
   display: inline-block;
   margin: 0;
-  background-size: contain;
 }
 .fat__radio {
   margin-left: 15px;
