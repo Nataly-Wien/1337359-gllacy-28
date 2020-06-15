@@ -13,13 +13,13 @@
   <header class="page-header container">
     <div class="page-header__menu">
       <nav class="main-nav">
-        <a href="index.html">
+        <a class="main-nav__logo-block" href="index.html">
           <img class="main-nav__logo" src="img/logo.svg" width="154" height="64"
             alt="Назад на главную страницу магазина Глейси">
         </a>
         <ul class="main-menu">
           <li class="main-menu__item main-menu__item--current">
-            <a class="btn" href="blank.html">
+            <a class="custom-focus" href="blank.html">
               Каталог
             </a>
             <ul class="dropdown">
@@ -53,12 +53,12 @@
             </ul>
           </li>
           <li class="main-menu__item">
-            <a class="btn" href="blank.html">
+            <a class="custom-focus" href="blank.html">
               Доставка и оплата
             </a>
           </li>
           <li class="main-menu__item">
-            <a class="btn" href="blank.html">
+            <a class="custom-focus" href="blank.html">
               О компании
             </a>
           </li>
@@ -67,7 +67,7 @@
 
       <ul class="usernav">
         <li class="usernav__item">
-          <a class="usernav__btn search-btn btn" href="#">
+          <a class="usernav__btn no_text custom-focus" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
               viewBox="0 0 17 17">
               <path fill="#fff"
@@ -82,7 +82,7 @@
           </form>
         </li>
         <li class="usernav__item">
-          <a class="usernav__btn btn" href="#">
+          <a class="usernav__btn custom-focus" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="19"
               viewBox="0 0 21 19">
               <g fill="#000">
@@ -115,7 +115,7 @@
           </form>
         </li>
         <li class="usernav__item">
-          <a class="usernav__btn cart-full btn" href="#">
+          <a class="usernav__btn cart-full custom-focus" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
               <path class="cart-area" fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
               <circle fill="#343434" cx="6.984" cy="18" r="2" />
@@ -135,7 +135,7 @@
                   </button>
                 </td>
                 <td class="crt__img">
-                  <img src="img/tovar-cart1.jpg" width="33" height="33" alt="">
+                  <img src="img/tovar-1.jpg" width="33" height="33" alt="">
                 </td>
                 <td class="crt__name">
                   Пломбир с апельсиновым джемом
@@ -143,7 +143,7 @@
                 <td class="crt__amount">
                   1,5 кг х
                 </td>
-                <td class="crt__price" crt__price>
+                <td class="crt__price">
                   200 руб.
                 </td>
                 <td class="crt__sum">
@@ -157,7 +157,7 @@
                   </button>
                 </td>
                 <td class="crt__img">
-                  <img src="img/tovar-cart2.jpg" width="33" height="33" alt="">
+                  <img src="img/tovar-3.jpg" width="33" height="33" alt="">
                 </td>
                 <td class="crt__name">
                   Клубничный пломбир с присыпкой из белого шоколада
@@ -191,17 +191,17 @@
   <main class="container">
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
-        <a class="link btn" href="index.html">
+        <a class="link custom-focus" href="index.html">
           Главная
         </a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="link btn" href="blank.html">
+        <a class="link custom-focus" href="blank.html">
           Каталог
         </a>
       </li>
       <li class="breadcrumbs__item">
-        <a class="link disabled btn">
+        <a class="link disabled custom-focus">
           Сливочное
         </a>
       </li>
@@ -233,8 +233,8 @@
           <div class="scale">
             <div class="progress"></div>
           </div>
-          <div class="range__btn range-btn--min btn" id="range-btn--min" tabindex="0"></div>
-          <div class="range__btn range-btn--max btn" id="range-btn--max" tabindex="0"></div>
+          <div class="range__btn range-btn--min custom-focus" id="range-btn--min" tabindex="0"></div>
+          <div class="range__btn range-btn--max custom-focus" id="range-btn--max" tabindex="0"></div>
         </div>
       </div>
       <fieldset>
@@ -339,9 +339,7 @@
           </li>
         </ul>
       </fieldset>
-      <div class="filter-btn filter__wrapper">
-        <button class="filter__button btn" type="submit">Применить</button>
-      </div>
+      <button class="filter__button custom-focus" type="submit">Применить</button>
     </form>
 
     <section class="catalog">
@@ -421,7 +419,7 @@
         </li>
         <li class="goods">
           <a href="blank.html">
-            <h3 class="goods__name">Сливочно-ванильное мороженое с&nbsp;кусочками шоколада</h3>
+            <h3 class="goods__name">Сливочно-ванильное с&nbsp;кусочками шоколада</h3>
           </a>
           <p class="goods__price">440 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/tovar-9.jpg" width="267" height="267"
@@ -458,31 +456,33 @@
       </ul>
     </section>
 
-    <div class="paginator">
-      <a class="paginator__arrow back disabled" title="Это первая страница">
-        <span class="visually-hidden">Предыдущая</span>
-      </a>
-      <ul class="pagination">
-        <li class="pagination__item">
-          <a class="btn active" title="Текуцая страница">1</a>
-        </li>
-        <li class="pagination__item">
-          <a class="btn" href="#">2</a>
-        </li>
-        <li class="pagination__item">
-          <a class="btn" href="#">3</a>
-        </li>
-        <li class="pagination__item">
-          <a class="btn" href="#">4</a>
-        </li>
-        <li class="pagination__item">
-          <a class="btn" href="#">5</a>
-        </li>
-      </ul>
-      <a class="paginator__arrow forward" href="#">
-        <span class="visually-hidden">Следующая</span>
-      </a>
-    </div>
+    <ul class="pagination">
+      <li>
+        <a class="pagination__arrow back disabled" title="Это первая страница">
+          <span class="visually-hidden">Предыдущая</span>
+        </a>
+      </li>
+      <li class="pagination__item">
+        <a class="custom-focus active" title="Текуцая страница">1</a>
+      </li>
+      <li class="pagination__item">
+        <a class="custom-focus" href="#">2</a>
+      </li>
+      <li class="pagination__item">
+        <a class="custom-focus" href="#">3</a>
+      </li>
+      <li class="pagination__item">
+        <a class="custom-focus" href="#">4</a>
+      </li>
+      <li class="pagination__item">
+        <a class="custom-focus" href="#">5</a>
+      </li>
+      <li>
+        <a class="pagination__arrow forward" href="#">
+          <span class="visually-hidden">Следующая</span>
+        </a>
+      </li>
+    </ul>
   </main>
 
   <footer class="footer-nav container">
@@ -490,7 +490,7 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social">
         <li class="social__item">
-          <a class="btn" href="#">
+          <a class="custom-focus" href="#">
             <span class="visually-hidden">Фейсбук</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path fill="#FFF"
@@ -499,7 +499,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="btn" href="#">
+          <a class="custom-focus" href="#">
             <span class="visually-hidden">ВКонтакте</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
@@ -512,7 +512,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="btn" href="#">
+          <a class="custom-focus" href="#">
             <span class="visually-hidden">Инстаграм</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
@@ -527,7 +527,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="btn" href="#">
+          <a class="custom-focus" href="#">
             <span class="visually-hidden">Твитер</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path fill="#FFF"
@@ -539,22 +539,22 @@
     </section>
     <ul class="footer-menu">
       <li class="footer-menu__item">
-        <a class="link accent provider btn" href="blank.html">
+        <a class="link accent provider custom-focus" href="blank.html">
           Для поставщиков
         </a>
       </li>
       <li class="footer-menu__item">
-        <a class="link btn" href="blank.html">
+        <a class="link custom-focus" href="blank.html">
           Наши документы
         </a>
       </li>
       <li class="footer-menu__item">
-        <a class="link btn" href="blank.html">
+        <a class="link custom-focus" href="blank.html">
           О производстве
         </a>
       </li>
       <li class="footer-menu__item">
-        <a class="link btn" href="blank.html">
+        <a class="link custom-focus" href="blank.html">
           Экологические стандарты
         </a>
       </li>
@@ -563,7 +563,8 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-academy.svg" width="108" height="39" alt="Разработчик сайта - HTML Academy">
       </a>
-      <p>Сделано в <a class="link btn" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+      <p>Сделано в <a class="link custom-focus" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+      </p>
     </div>
   </footer>
 
