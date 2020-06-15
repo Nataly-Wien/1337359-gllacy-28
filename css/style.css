@@ -341,9 +341,6 @@ img {
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--black-04);
 }
-.usernav .cart {
-  display: block;
-}
 .usernav__item:hover form,
 .usernav__item:hover section,
 .usernav__item form:hover,
