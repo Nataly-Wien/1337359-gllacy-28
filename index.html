@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-body page1">
+<body class="page-body main-body page1">
 
   <header class="page-header container">
     <div class="page-header__menu">
@@ -196,7 +196,7 @@
               <h3 class="goods__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             </a>
             <p class="goods__price">310 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
-            <img class="goods__image" src="img/tovar-1.jpg" width="267" height="267"
+            <img class="goods__image" src="img/ice-1.jpg" width="267" height="267"
               alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
             <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
           </li>
@@ -205,7 +205,7 @@
               <h3 class="goods__name">Сливочно-кофейное с кусочками шоколада </h3>
             </a>
             <p class="goods__price">380 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
-            <img class="goods__image" src="img/tovar-2.jpg" width="267" height="267"
+            <img class="goods__image" src="img/ice-2.jpg" width="267" height="267"
               alt="Сливочно-кофейное мороженое с кусочками шоколада">
             <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
           </li>
@@ -214,7 +214,7 @@
               <h3 class="goods__name">Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</h3>
             </a>
             <p class="goods__price">355 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
-            <img class="goods__image" src="img/tovar-3.jpg" width="267" height="267"
+            <img class="goods__image" src="img/ice-3.jpg" width="267" height="267"
               alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
             <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
           </li>
@@ -223,7 +223,7 @@
               <h3 class="goods__name">Сливочное крем-брюле с&nbsp;карамельной подливкой</h3>
             </a>
             <p class="goods__price">415 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
-            <img class="goods__image" src="img/tovar-4.jpg" width="267" height="267"
+            <img class="goods__image" src="img/ice-4.jpg" width="267" height="267"
               alt="Сливочное крем-брюле с карамельной подливкой">
             <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
           </li>
@@ -378,15 +378,15 @@
     </div>
   </footer>
 
-  <section class="modal overlay" id="feedback">
+  <section class="modal overlay">
     <div class="feedback">
       <div class="feedback__wrapper">
         <h2 class="feedback__header">Мы обязательно вам ответим!</h2>
-        <button class="feedback__btn" type="button">
+        <button class="feedback__close-btn" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
       </div>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form action="https://echo.htmlacademy.ru" method="post" name="feed">
         <p>
           <label class="visually-hidden" for="name-field">Как вас зовут?</label>
           <input class="input" type="text" name="username" id="name-field" placeholder="Имя Фамилия">
@@ -405,6 +405,7 @@
       </form>
     </div>
   </section>
+  <script src="js/script.js"></script>
 
 </body>
 

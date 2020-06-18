@@ -71,7 +71,6 @@ html {
   min-height: 100%;
   min-width: 1200px;
   display: grid;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   margin: 0;
   padding: 0;
@@ -572,8 +571,6 @@ button[type="button"] {
   order: -1;
   min-width: 350px;
   min-height: 350px;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .slider__slogan {
   margin-top: -269px;
@@ -1570,17 +1567,14 @@ ul.fieldset-wrapper {
 }
 .modal {
   display: none;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   z-index: 30;
 }
-.seperate-page {
+.show {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.modal-wrapper {
+.seperate-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1602,15 +1596,15 @@ ul.fieldset-wrapper {
   padding: 14px 14px 27px 22px;
   border-radius: 6px;
 }
-.feedback__btn {
+.feedback__close-btn {
   position: relative;
   width: 18px;
   height: 18px;
   border: none;
   background-color: var(--form-light-grey);
 }
-.feedback__btn::before,
-.feedback__btn::after {
+.feedback__close-btn::before,
+.feedback__close-btn::after {
   content: "";
   position: absolute;
   left: -5px;
@@ -1618,10 +1612,10 @@ ul.fieldset-wrapper {
   height: 2px;
   background-color: var(--basic-extra-dark);
 }
-.feedback__btn::before {
+.feedback__close-btn::before {
   transform: rotate(45deg);
 }
-.feedback__btn::after {
+.feedback__close-btn::after {
   transform: rotate(-45deg);
 }
 .feedback__wrapper {
@@ -1649,13 +1643,55 @@ ul.fieldset-wrapper {
 .feedback .textarea:focus {
   font-weight: bold;
   color: var(--basic-extra-dark);
-
 }
 .feedback__button {
   float: right;
   margin-right: 13px;
   padding: 10px 24px;
   border: none;
+}
+
+/* Анимация модального окна */
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+    transform-origin: 0% 100%;
+    transform: rotate(-2deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+    transform-origin: 100% 100%;
+    transform: rotate(2deg);
+  }
+}
+.submit-error {
+  animation-name: shake;
+  animation-duration: 0.8s;
+}
+@keyframes fade-up {
+  0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+.appear {
+  animation-name: fade-up;
+  animation-duration: 0.6s;
 }
 
 /* Пустая страница-заглушка */
