@@ -7,6 +7,7 @@ var userName = feedbackForm.username;
 var userMail = feedbackForm.email;
 var userText = feedbackForm.usertext;
 var sliderButtons = document.querySelectorAll('.slider-section__ctrl');
+var pageBackground = document.querySelector('.main-body');
 var isStorage = true;
 
 try {
@@ -23,6 +24,7 @@ function closeWin() {
     feedbackWindow.classList.remove('submit-error');
   }
   feedbackPopup.classList.remove('show');
+  window.removeEventListener('keydown', escHandler);
 }
 
 feedbackOpenButton.addEventListener('click', function (evt) {
@@ -65,12 +67,14 @@ feedbackForm.addEventListener('submit', function (evt) {
   }
 });
 
-window.addEventListener('keydown', function (evt) {
+function escHandler(evt) {
   if (evt.code === 'Escape' && feedbackPopup.classList.contains('show')) {
     evt.preventDefault();
     closeWin();
   }
-});
+};
+
+window.addEventListener('keydown', escHandler);
 
 feedbackPopup.addEventListener('click', function (evt) {
   if (!feedbackWindow.contains(evt.target)) {
@@ -79,7 +83,8 @@ feedbackPopup.addEventListener('click', function (evt) {
 });
 
 for (let i = 0; i < sliderButtons.length; i++) {
-  sliderButtons[i].addEventListener('click', function () {
+  sliderButtons[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
     let currentSlide = document.querySelector('.slider__slide--current');
     currentSlide.classList.remove('slider__slide--current');
     let newSlide = document.querySelector('.slide' + (i + 1));
@@ -87,7 +92,6 @@ for (let i = 0; i < sliderButtons.length; i++) {
     let currentButton = document.querySelector('.slider-section__ctrl--current');
     currentButton.classList.remove('slider-section__ctrl--current');
     sliderButtons[i].classList.add('slider-section__ctrl--current');
-    let pageBackground = document.querySelector('.main-body');
     pageBackground.classList.remove(pageBackground.className.match(/page\d+/));
     pageBackground.classList.add('page' + (i + 1));
   });
