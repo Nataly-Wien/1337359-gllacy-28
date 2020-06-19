@@ -8,6 +8,7 @@ var userMail = feedbackForm.email;
 var userText = feedbackForm.usertext;
 var sliderButtons = document.querySelectorAll('.slider-section__ctrl');
 var pageBackground = document.querySelector('.main-body');
+var feedbackSubmitButton = document.querySelector('.feedback__button');
 var isStorage = true;
 
 try {
@@ -24,7 +25,7 @@ function closeWin() {
     feedbackWindow.classList.remove('submit-error');
   }
   feedbackPopup.classList.remove('show');
-  window.removeEventListener('keydown', escHandler);
+  window.removeEventListener('keydown', keyHandler);
 }
 
 feedbackOpenButton.addEventListener('click', function (evt) {
@@ -67,14 +68,22 @@ feedbackForm.addEventListener('submit', function (evt) {
   }
 });
 
-function escHandler(evt) {
+function keyHandler(evt) {
   if (evt.code === 'Escape' && feedbackPopup.classList.contains('show')) {
     evt.preventDefault();
     closeWin();
-  }
+  } else
+    if (evt.code === 'Tab' && !evt.shiftKey && evt.target === feedbackSubmitButton) {
+      evt.preventDefault();
+      feedbackCloseButton.focus();
+    } else
+      if (evt.code === 'Tab' && evt.shiftKey && evt.target === feedbackCloseButton) {
+        evt.preventDefault();
+        feedbackSubmitButton.focus();
+      }
 };
 
-window.addEventListener('keydown', escHandler);
+window.addEventListener('keydown', keyHandler);
 
 feedbackPopup.addEventListener('click', function (evt) {
   if (!feedbackWindow.contains(evt.target)) {
@@ -96,3 +105,17 @@ for (let i = 0; i < sliderButtons.length; i++) {
     pageBackground.classList.add('page' + (i + 1));
   });
 }
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.93925, 30.32946],
+    zoom: 16
+  }),
+    icePin = new ymaps.Placemark([59.938635, 30.323118], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/pin.svg',
+      iconImageSize: [80, 140],
+      iconImageOffset: [-40, -140]
+    });
+  myMap.geoObjects.add(icePin);
+});

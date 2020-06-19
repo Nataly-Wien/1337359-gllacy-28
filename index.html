@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9395d110-4f09-40cd-926b-3aa3056fde37&lang=ru_RU"
+    type="text/javascript"></script>
 </head>
 
 <body class="page-body main-body page1">
@@ -281,8 +283,7 @@
       <h2 class="visually-hidden">Как нас найти</h2>
       <img src="img/map.png" width="1200" height="430"
         alt="Карта с местонахождением магазина Глейси, ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      <iframe src="https://yandex.ru/map-widget/v1/-/CCQhUHQo1A" height="430" frameborder="1" allowfullscreen="true">
-      </iframe>
+      <div class="map__container" id="map"></div>
       <div class="contacts">
         <div class="contacts__block">
           <p>Адрес главного офиса<br>и офлайн-магазина:</p>
