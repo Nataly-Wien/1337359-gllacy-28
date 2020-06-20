@@ -13,7 +13,7 @@ var isStorage = true;
 
 try {
   var email = localStorage.getItem('email');
-} catch {
+} catch (err) {
   isStorage = false;
 }
 
@@ -63,7 +63,7 @@ feedbackForm.addEventListener('submit', function (evt) {
       }
     feedbackWindow.classList.add('submit-error');
   } else {
-    localStorage.setItem('email', userMail.value)
+    localStorage.setItem('email', userMail.value);
     closeWin();
   }
 });
