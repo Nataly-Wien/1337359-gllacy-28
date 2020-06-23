@@ -108,7 +108,7 @@ for (let i = 0; i < sliderButtons.length; i++) {
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
-    center: [59.93925, 30.32946],
+    center: [59.93929, 30.32942],
     zoom: 16
   }),
     icePin = new ymaps.Placemark([59.938635, 30.323118], {}, {

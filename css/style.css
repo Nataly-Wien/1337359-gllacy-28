@@ -11,7 +11,8 @@
   --background-pattern: #ede0c0;
   --background-extra-light: #fefefe;
   --background-compo: #a9bbb1;
-  --background-dark: #520715;
+  --background-berry: #851034;
+  --background-chocko: #520715;
   --form-light-grey: #f8f7f4;
   --form-grey: #cacac7;
   --form-dark-grey: #c4c4c4;
@@ -130,7 +131,7 @@ img {
 .main-menu {
   list-style: none;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -139,13 +140,13 @@ img {
   margin: 0;
   padding: 0;
   position: relative;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-bottom: 8px solid transparent;
 }
 .main-menu__item > a {
   display: inline-block;
   vertical-align: bottom;
-  padding: 6px 14px 7px;
+  padding: 6px 15px 7px 14px;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
@@ -193,7 +194,7 @@ img {
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--black-04);
 }
-.main-menu > li:hover .dropdown {
+.main-menu__item:hover .dropdown {
   display: block;
 }
 .main-menu__item:focus-within > .dropdown {
@@ -318,7 +319,7 @@ img {
 .usernav__btn.cart-full:active {
   color: var(--link-dark-red);
 }
-.usernav__btn.cart-full .cart-area   {
+.usernav__btn.cart-full .cart-area {
   fill: var(--link-dark-red);
 }
 .usernav .search,
@@ -357,7 +358,9 @@ img {
 
 /* Стили для инпутов */
 
-.input, .select, .textarea {
+.input,
+.select,
+.textarea {
   box-sizing: border-box;
   margin: 0;
   font-family: inherit;
@@ -390,10 +393,13 @@ img {
   border: 2px solid var(--border-grey);
 }
 .input:focus,
-.textarea:focus,
-.select:focus {
+.textarea:focus {
   border: 2px solid var(--border-blue);
   outline: none;
+}
+.input:hover,
+.input:focus {
+  padding: 15px 13px 13px 12px;
 }
 
 /* Общие стили для кнопок */
@@ -404,10 +410,11 @@ button[type="button"] {
 .custom-focus {
   outline: none;
 }
-.button{
+.button {
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
+  text-align: center;
   padding: 12px 22px;
   color: var(--basic-white);
   background-color: var(--background-red);
@@ -435,18 +442,24 @@ button[type="button"] {
 .usernav .search {
   min-width: 341px;
   height: auto;
-  right: -8px;
   padding: 20px 15px;
   color: var(--basic-extra-dark);
 }
 .search .input {
   width: 311px;
 }
-.search .input, .entry .input {
+.search .input,
+.entry .input {
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
   padding-bottom: 20px;
+}
+.search .input:hover,
+.entry .input:hover,
+.search .input:focus,
+.entry .input:focus {
+  padding-bottom: 19px;
 }
 
 /* Форма входа */
@@ -475,7 +488,7 @@ button[type="button"] {
 }
 .entry .input {
   width: 241px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 .entry p {
   margin: 0;
@@ -491,8 +504,8 @@ button[type="button"] {
           text-decoration-color: var(--link-transp-extra-dark);
 }
 .entry .button {
-  box-sizing: border-box;
-  padding: 9px 25px;
+  max-width: 110px;
+  padding: 11px 25px 10px;
   border: none;
   box-shadow: none;
 }
@@ -542,8 +555,6 @@ button[type="button"] {
 .slider__image {
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -600px;
   z-index: -1;
 }
 .slider__slogan {
@@ -555,6 +566,7 @@ button[type="button"] {
   text-align: center;
 }
 .slider__button {
+  max-width: 300px;
   padding: 10px 40px 10px 40px;
   border-radius: 70px;
   font-size: 32px;
@@ -572,7 +584,7 @@ button[type="button"] {
 }
 .slider-section__block {
   margin-top: -44px;
-  margin-bottom: 64px;
+  margin-bottom: 63px;
   font-size: 0;
 }
 .slider-section__ctrl {
@@ -580,11 +592,11 @@ button[type="button"] {
   width: 20px;
   height: 20px;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 9px;
   padding: 0;
   border-radius: 50%;
+  border: 2px solid var(--basic-white);
   background-color: transparent;
-  border: 3px solid var(--basic-white);
 }
 .slider-section__ctrl.slider-section__ctrl--current {
   background-color: var(--basic-white);
@@ -611,20 +623,20 @@ button[type="button"] {
   flex-direction: column;
   align-items: flex-start;
   padding: 15px 22px 22px 16px;
-  background-color: var(--background-dark);
   border-radius: 16px;
+  background-size: cover;
+  background-position: center;
 }
 .banners__item.item1 {
+  background-color: var(--background-berry);
   background-image: url("../img/berry.jpg");
-  background-size: cover;
-  background-position: center;
 }
 .banners__item.item2 {
+  background-color: var(--background-chocko);
   background-image: url("../img/chocko.jpg");
-  background-size: cover;
-  background-position: center;
 }
 .banners__item .button {
+  max-width: 180px;
   margin-top: 25px;
   align-self: flex-end;
 }
@@ -668,7 +680,7 @@ button[type="button"] {
   content: "";
   position: absolute;
   top: 6px;
-  left: 13px;
+  left: 14px;
   width: 61px;
   height: 61px;
   border-radius: 50%;
@@ -683,7 +695,7 @@ button[type="button"] {
   border-radius: 50%;
   -o-object-fit: contain;
      object-fit: contain;
-  background-image: radial-gradient(circle, var(--link-light-red) 50%, var(--link-dark-red) 75%, var(--background-dark) 100%);
+  background-image: radial-gradient(circle, var(--link-light-red) 50%, var(--link-dark-red) 75%, var(--background-chocko) 100%);
 }
 .goods__name {
   margin: 0;
@@ -695,7 +707,7 @@ button[type="button"] {
 a > .goods__name {
   font-size: 16px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 140%;
   color: var(--basic-white);
   text-decoration: underline;
   -webkit-text-decoration-color: var(--white-03);
@@ -718,7 +730,7 @@ a > .goods__name {
 .goods__button {
   margin-bottom: 23px;
   padding: 10px 17px;
-  display: inline-block;
+  display: block;
   visibility: hidden;
   order: -1;
 }
@@ -747,7 +759,7 @@ a > .goods__name {
 .features {
   margin-top: 10px;
   margin-bottom: 40px;
-  padding: 24px 20px 9px;
+  padding: 24px 20px 7px;
   background-image: url("../img/pattern.jpg");
   background-color: var(--background-pattern);
   background-repeat: repeat;
@@ -810,7 +822,7 @@ a > .goods__name {
 }
 .blog {
   font-weight: 500;
-  padding: 18px 250px 35px 20px;
+  padding: 16px 250px 37px 20px;
   border-radius: 16px;
   background-color: var(--basic-white);
   background-image: url("../img/blog.jpg");
@@ -842,7 +854,7 @@ a > .goods__name {
 }
 .subscription {
   margin: 0;
-  padding: 22px 20px 35px 20px;
+  padding: 22px 20px 34px 20px;
   color: var(--basic-dark);
   background-color: var(--form-light-grey);
   border: 1px solid transparent;
@@ -857,11 +869,12 @@ a > .goods__name {
   justify-content: space-between;
   align-items: flex-start;
 }
-.subscription p{
+.subscription p {
   margin: 0;
   margin-bottom: 40px;
 }
 .subscription__button {
+  max-width: 130px;
   margin: 0;
   padding: 10px 19px 9px;
   border: none;
@@ -876,7 +889,7 @@ a > .goods__name {
   position: relative;
   width: 100%;
   height: 430px;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
   overflow: hidden;
   font-size: 0;
   background-color: var(--background-pattern);
@@ -906,7 +919,7 @@ a > .goods__name {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 22px 25px 30px;
+  padding: 22px 25px 29px;
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
@@ -929,6 +942,7 @@ a > .goods__name {
   color: var(--basic-extra-dark);
 }
 .contacts__button {
+  max-width: 255px;
   margin-top: 12px;
   align-self: center;
   padding: 10px 28px 9px 28px;
@@ -936,7 +950,7 @@ a > .goods__name {
 
 /* Подвал */
 
-.link{
+.link {
   color: var(--basic-white);
   text-decoration: underline;
   -webkit-text-decoration-color: var(--white-03);
@@ -970,24 +984,27 @@ a > .goods__name {
   justify-content: center;
 }
 .social__item {
-  padding-top: 4px;
-  padding-right: 9px;
-}
-.social__item a {
-  display: block;
-  line-height: 0;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+  margin-right: 8px;
   border-radius: 50%;
   border: 2px solid var(--white-05);
 }
-.social__item a path {
+.social-button {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.social-button path {
   fill: var(--white-08);
 }
-.social__item a:hover path,
-.social__item a:focus path,
-.social__item a:active path {
+.social-button:hover path,
+.social-button:focus path,
+.social-button:active path {
   fill: var(--basic-white);
 }
-.social__item a:active {
+.social-button:active {
   border: 2px solid var(--white-07);
 }
 .footer-menu {
@@ -1044,7 +1061,7 @@ a > .goods__name {
   padding: 10px 14px 21px 19px;
   color: var(--basic-extra-dark);
 }
-.cart .crt {
+.cart-table {
   margin: 0;
   font-size: 13px;
   font-weight: normal;
@@ -1052,10 +1069,10 @@ a > .goods__name {
   border-collapse: collapse;
   border-bottom: 1px solid var(--form-grey)
 }
-.crt td {
-  vertical-align: baseline;
+.cart-table td {
+  vertical-align: top;
   padding-top: 19px;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
 }
 
 /* Кнопка удаления товара */
@@ -1087,42 +1104,39 @@ a > .goods__name {
 
 /* Ячейки таблицы корзины */
 
-.crt .crt__button {
+.cart-table .cart-table__button {
   width: 11px;
   padding-right: 5px;
   padding-left: 6px;
-  padding-top: 13px;
-  vertical-align: top;
 }
-.crt .crt__img {
+.cart-table .cart-table__img {
   width: 35px;
   padding-right: 0;
   padding-left: 0;
   padding-top: 10px;
   padding-bottom: 2px;
-  vertical-align: top;
 }
-.crt__img img {
+.cart-table__img img {
   border-radius: 50%;
 }
-.crt__name {
+.cart-table__name {
   width: 238px;
   padding-right: 10px;
   padding-left: 14px;
 }
-.crt__amount {
+.cart-table__amount {
   width: 52px;
   padding-left: 3px;
   text-align: right;
 }
-.crt__price {
+.cart-table__price {
   width: 53px;
   padding-right: 8px;
   padding-left: 5px;
   text-align: right;
   color: var(--form-dark-grey);
 }
-.crt__sum {
+.cart-table__sum {
   width: 59px;
   padding-right: 20px;
   padding-left: 8px;
@@ -1131,18 +1145,19 @@ a > .goods__name {
 .cart .total {
   margin: 0;
   margin-top: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   font-size: 15px;
   font-weight: bold;
   line-height: 16px;
   text-align: right;
 }
 .total > span {
-  margin-right: 2px;
+  margin-right: 1px;
 }
 .cart .button {
   float: right;
-  padding: 10px 15px 8px;
+  max-width: 180px;
+  padding: 10px 15px;
 }
 
 /* Хлебные крошки */
@@ -1229,11 +1244,11 @@ ul.fieldset-wrapper {
   background-color: var(--background-compo);
   border-radius: 20px;
 }
-.fieldset-wrapper li {
+.custom-check {
   margin: 0;
   padding: 0;
 }
-.fieldset-wrapper li:last-child > label {
+.custom-check:last-child > label {
   margin-right: 18px;
 }
 .fieldset-wrapper.fat {
@@ -1288,8 +1303,8 @@ ul.fieldset-wrapper {
 
 .fat__check,
 .fill__check {
-  display: inline-block;
   z-index: 2;
+  display: inline-block;
   vertical-align: super;
   padding: 1px 1px 1px 39px;
   cursor: pointer;
@@ -1299,7 +1314,6 @@ ul.fieldset-wrapper {
 }
 .fat__radio,
 .fill__checkbox {
-  display: inline-block;
   margin: 0;
 }
 .fat__radio {
@@ -1320,7 +1334,7 @@ ul.fieldset-wrapper {
 .fat__input:checked:disabled + .fat__radio circle {
   fill: var(--white-04);
 }
-.fat__input:disabled + .fat__radio path{
+.fat__input:disabled + .fat__radio path {
   fill: var(--white-04);
 }
 .custom-check:hover .fat__input:not(:disabled) + .fat__radio path {
@@ -1419,7 +1433,7 @@ ul.fieldset-wrapper {
 }
 .range__btn {
   position: absolute;
-  display: inline-block;
+  display: block;
   width: 4px;
   height: 4px;
   top: 8px;
@@ -1442,7 +1456,7 @@ ul.fieldset-wrapper {
   left: 132px;
 }
 .price {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
   box-sizing: border-box;
   width: 30px;
   height: 16px;
@@ -1462,6 +1476,7 @@ ul.fieldset-wrapper {
 .filter__button {
   align-self: flex-end;
   box-sizing: border-box;
+  max-width: 150px;
   margin-bottom: 10px;
   padding: 7px 28px 8px;
   font: inherit;
@@ -1491,7 +1506,7 @@ ul.fieldset-wrapper {
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
-  margin: 46px 0 17px;
+  margin: 45px 0 17px;
   padding: 0;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--white-02);
@@ -1546,7 +1561,7 @@ ul.fieldset-wrapper {
 
 /* Модальное окно обратной связи */
 
-.modal-body{
+.modal-body {
   display: block;
   padding-top: 50px;
 }
@@ -1625,11 +1640,16 @@ ul.fieldset-wrapper {
   line-height: 20px;
   color: var(--input-grey);
 }
+.feedback .textarea:hover,
+.feedback .textarea:focus{
+  padding: 9px 13px;
+}
 .feedback .textarea:focus {
   font-weight: bold;
   color: var(--basic-extra-dark);
 }
 .feedback__button {
+  max-width: 180px;
   float: right;
   margin-right: 13px;
   padding: 10px 24px;

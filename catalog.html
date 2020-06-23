@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси (каталог)</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize1.css">
   <link rel="stylesheet" href="css/style1.css">
 </head>
 
@@ -127,48 +127,49 @@
           </a>
           <section class="cart">
             <h2 class="visually-hidden">Ваша корзина</h2>
-            <table class="crt">
-              <tr class="crt__row">
-                <td class="crt__button">
+            <table class="cart-table">
+              <tr class="cart-table__row">
+                <td class="cart-table__button">
                   <button class="delete-good" type="button">
                     <span class="visually-hidden">Удалить товар</span>
                   </button>
                 </td>
-                <td class="crt__img">
-                  <img src="img/ice-cart1.jpg" width="33" height="33" alt="">
+                <td class="cart-table__img">
+                  <img src="img/ice-cart1.jpg" width="33" height="33" alt="Полосатое бело-апельсиновое мороженое">
                 </td>
-                <td class="crt__name">
+                <td class="cart-table__name">
                   Пломбир с апельсиновым джемом
                 </td>
-                <td class="crt__amount">
+                <td class="cart-table__amount">
                   1,5 кг х
                 </td>
-                <td class="crt__price">
+                <td class="cart-table__price">
                   200 руб.
                 </td>
-                <td class="crt__sum">
+                <td class="cart-table__sum">
                   300 руб.
                 </td>
               </tr>
-              <tr class="crt__row">
-                <td class="crt__button">
+              <tr class="cart-table__row">
+                <td class="cart-table__button">
                   <button class="delete-good" type="button">
                     <span class="visually-hidden">Удалить товар</span>
                   </button>
                 </td>
-                <td class="crt__img">
-                  <img src="img/ice-cart2.jpg" width="33" height="33" alt="">
+                <td class="cart-table__img">
+                  <img src="img/ice-cart2.jpg" width="33" height="33"
+                    alt="Сливочно-клубничное мороженое с присыпкой из белых и розовых шоколадных сердечек">
                 </td>
-                <td class="crt__name">
+                <td class="cart-table__name">
                   Клубничный пломбир с присыпкой из белого шоколада
                 </td>
-                <td class="crt__amount">
+                <td class="cart-table__amount">
                   1,5 кг х
                 </td>
-                <td class="crt__price">
+                <td class="cart-table__price">
                   300 руб.
                 </td>
-                <td class="crt__sum">
+                <td class="cart-table__sum">
                   450 руб.
                 </td>
               </tr>
@@ -351,7 +352,7 @@
           </a>
           <p class="goods__price">310 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-1.jpg" width="267" height="267"
-            alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
+            alt="Полосатое белое-апельсиновое мороженое">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -360,7 +361,7 @@
           </a>
           <p class="goods__price">380 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-2.jpg" width="267" height="267"
-            alt="Сливочно-кофейное мороженое с кусочками шоколада">
+            alt="Светло-коричневое мороженое с посыпкой из толченого шоколада">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -369,7 +370,7 @@
           </a>
           <p class="goods__price">355 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-3.jpg" width="267" height="267"
-            alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
+            alt="Сливочно-клубничное мороженое с присыпкой из белых и розовых шоколадных сердечек">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -378,7 +379,7 @@
           </a>
           <p class="goods__price">415 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-4.jpg" width="267" height="267"
-            alt="Сливочное крем-брюле с карамельной подливкой">
+            alt="Бежевое мороженое с темно-карамельными вкраплениями и желтой посыпкой">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -387,7 +388,7 @@
           </a>
           <p class="goods__price">325 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-5.jpg" width="267" height="267"
-            alt="Сливочное мороженое с брусничным джемом">
+            alt="Полосатое бело-брусничное мороженое с кусочками ягод">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -396,7 +397,7 @@
           </a>
           <p class="goods__price">410 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-6.jpg" width="267" height="267"
-            alt="Сливочно-черничное мороженое с цельными ягодами черники">
+            alt="Бело-фиолетовое мороженое с цельными ягодами">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -405,7 +406,7 @@
           </a>
           <p class="goods__price">315 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-7.jpg" width="267" height="267"
-            alt="Сливочно-лимонное мороженое с карамельной присыпкой">
+            alt="Лимонно-желтое мороженое с присыпкой из красной, зеленой и желой карамельной крошки">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -414,7 +415,7 @@
           </a>
           <p class="goods__price">320 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-8.jpg" width="267" height="267"
-            alt="Сливочное мороженое с шоколадной стружкой">
+            alt="Сливочно-белое мороженое с присыпкой из шоколадной стружки">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -423,7 +424,7 @@
           </a>
           <p class="goods__price">440 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-9.jpg" width="267" height="267"
-            alt="Сливочно-ванильное мороженое с кусочками шоколада">
+            alt="Желто-белое мороженое с кусочками шоколада">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -432,7 +433,7 @@
           </a>
           <p class="goods__price">435 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-10.jpg" width="267" height="267"
-            alt="Сливочноe мороженое с ментоловым сиропом">
+            alt="Аппетитное голубовато-зкленоe мороженое">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -441,7 +442,7 @@
           </a>
           <p class="goods__price">355 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-11.jpg" width="267" height="267"
-            alt="Сливочное мороженое с кусочками черного шоколада">
+            alt="Сливочно-белое мороженое с кусочками черного шоколада">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
         <li class="goods">
@@ -450,7 +451,7 @@
           </a>
           <p class="goods__price">420 <span class="rouble">&#8381;</span><span class="kg">/кг</span></p>
           <img class="goods__image" src="img/ice-12.jpg" width="267" height="267"
-            alt="Сливочное мороженое с мятным сиропом">
+            alt="Аппетитное мятно-зеленое мороженое">
           <a class="goods__button button" href="blank.html">Быстрый просмотр</a>
         </li>
       </ul>
@@ -490,7 +491,7 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social">
         <li class="social__item">
-          <a class="custom-focus" href="#">
+          <a class="social-button custom-focus" href="#">
             <span class="visually-hidden">Фейсбук</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path fill="#FFF"
@@ -499,7 +500,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="custom-focus" href="#">
+          <a class="social-button custom-focus" href="#">
             <span class="visually-hidden">ВКонтакте</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
@@ -512,7 +513,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="custom-focus" href="#">
+          <a class="social-button custom-focus" href="#">
             <span class="visually-hidden">Инстаграм</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
@@ -527,7 +528,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="custom-focus" href="#">
+          <a class="social-button custom-focus" href="#">
             <span class="visually-hidden">Твитер</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <path fill="#FFF"
